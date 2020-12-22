@@ -1,0 +1,12 @@
+{
+  "labels": {
+    "menu": {
+      "map-menu": {
+        "teleport-anywhere": {
+          "question": "\\c[3]Teleport\\c[0] to map \"[!]\"?",
+          "map-id": "\\c[3]Map ID:\\c[0] [!]"
+        }
+      }
+    }
+  }
+}

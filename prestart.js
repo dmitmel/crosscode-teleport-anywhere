@@ -1,5 +1,7 @@
 // Well, this code turned out to not be as straight-forward as I anticipated
 
+const LANG_NAMESPACE = 'sc.gui.menu.map-menu.teleport-anywhere';
+
 sc.MapAreaContainer.inject({
   // See below
   mouseWasOverWhenDragged: false,
@@ -106,12 +108,15 @@ sc.MapAreaContainer.inject({
 
     // All of the checks above effectively are checking if the map has been
     // clicked and a map room ("map map"?) was under the cursor.
+    // Here you can basically see the main branch of onLandmarkPressed.
 
     let hoveredMapName = this.hoverRoom.text;
     let hoveredMapID = this.hoverRoom.name;
-    // Here you can basically see the main branch of onLandmarkPressed. I'll
-    // admit I got carried away with formatting.
-    let dialogText = `\\c[3]Teleport\\c[0] to map "${hoveredMapName}"?\n\\c[3]Map ID:\\c[0] ${hoveredMapID}`;
+    // I'll admit I got carried away with formatting.
+    let dialogText = [
+      ig.lang.grammarReplace(ig.lang.get(`${LANG_NAMESPACE}.question`), hoveredMapName),
+      ig.lang.grammarReplace(ig.lang.get(`${LANG_NAMESPACE}.map-id`), hoveredMapID),
+    ].join('\n');
     sc.BUTTON_SOUND.submit.play();
     sc.Dialogs.showYesNoDialog(dialogText, sc.DIALOG_INFO_ICON.QUESTION, (dialogBtn) => {
       // sc.menu.mapDrag is unset in onLandmarkPressed, dunno why, I'll follow along...

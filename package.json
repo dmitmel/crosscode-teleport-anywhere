@@ -2,9 +2,12 @@
   "name": "teleport-anywhere",
   "version": "0.1.0",
   "ccmodHumanName": "Teleport Anywhere!",
-  "description": "Teleport to any map/room simply by clicking it in the map menu",
+  "description": "Teleport to any map/room in an area simply by clicking it in the map menu",
   "license": "CC0-1.0",
   "homepage": "https://github.com/dmitmel/crosscode-teleport-anywhere",
   "module": true,
-  "prestart": "prestart.js"
+  "prestart": "prestart.js",
+  "assets": [
+    "data/lang/sc/gui.en_US.json.patch"
+  ]
 }
