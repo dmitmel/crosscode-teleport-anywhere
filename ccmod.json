@@ -1,0 +1,13 @@
+{
+  "id": "teleport-anywhere",
+  "version": "0.1.0",
+  "title": "Teleport Anywhere!",
+  "description": "Teleport to any map/room in an area or a dungeon simply by clicking it in the map menu",
+  "license": "CC0-1.0",
+  "homepage": "https://github.com/dmitmel/crosscode-teleport-anywhere",
+  "prestart": "prestart.js",
+  "assets": [
+    "data/lang/sc/gui.en_US.json.patch",
+    "data/lang/sc/gui.ru_RU.json.patch"
+  ]
+}
