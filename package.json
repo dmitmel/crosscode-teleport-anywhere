@@ -1,6 +1,6 @@
 {
   "name": "teleport-anywhere",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "ccmodHumanName": "Teleport Anywhere!",
   "description": "Teleport to any map/room in an area or a dungeon simply by clicking it in the map menu",
   "license": "CC0-1.0",
